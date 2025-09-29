@@ -10,6 +10,18 @@ Then create a program that reads a value from the user in American units
 and display the equivalent fuel efficiency in Canadian units.
 """
 
+#1 gal = 3.78541 L
+#100km = 62.1371 mi
+#1mpg = 235.215L/100km
+
+
+def canadianUnits():
+    mpg = float(input("How many miles per gallon do you get? "))
+    conversion = mpg*235.215
+    print(conversion, "L/100km")
+   
+#canadianUnits()    
+
 """
 Exercise 12:  Distance Between Two Points on Earth
 The surface of the Earth is curved, and teh distance between degrees
@@ -48,7 +60,9 @@ def earthDistance():
     cos(math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1-g2))
     print(distance)
 
-earthDistance()
+#earthDistance()
+
+
 """
 Exercise 13: Making Change
 Consider the software that runs on a self-checkout machine.  One task that
@@ -69,6 +83,24 @@ It's name is derived from the combination of the number two
 and the name of the loonie.
 """
 
+def change():
+    cents = int(input("Enter the amount of cents: "))
+
+    coins = [(200, "toonies"), (100, "loonies"), (25, "quarters"),
+         (10, "dimes"), (5, "nickels"), (1, "pennies")]
+
+    print("Your change can be given as:" )
+    for value, name in coins:
+            count = cents // value
+            cents = cents % value
+    if count > 0:
+            print(count, name)
+        
+change()
+
+    
+    
+
 """
 Exercise 14:  Height Units
 Many people think about their height in feet and inches, even in some
@@ -81,6 +113,17 @@ compute and display the equivalent number of centimeters.
 One foot is 12 inches.  One in ch is 2.54 centimeters.
 """
 
+def height ():
+    feet = float(input("How many feet tall?"))
+    inch = float(input("How many inches tall?"))
+    conv = feet * 12 *2.54
+    cent = inch * 2.54
+    total = conv = cent
+    print(total, "cm")
+    
+#height()
+
+
 """
 Exercise 15:  Distance Units
 In this exercise, you will create a program that begins by reading
@@ -92,6 +135,19 @@ the equivalent distance in inches, yards, and miles.
 36 inches = 1 yard = 0.00056818 miles
 63360 inches = 1760 yards = 1 mile
 """
+
+
+def distance ():
+    feet = float(input("how many feet?"))
+    inch = feet * 12
+    print(inch, "inches")
+    yards = feet/3
+    print(yards,"yards")
+    miles = feet / 5280
+    print(miles, "miles")
+
+#distance()
+
 
 if __name__ == "__main__":
     print("Hello World!")
