@@ -1,4 +1,4 @@
-
+import math
 """
 Exercise 16:  Area and Volume
 Write a program that begins by reading a radius, r, from the user.  The program 
@@ -9,6 +9,15 @@ module in your calculations.
 Hint:  The are of  circle is computed using the formula area = pi*r**2.  The 
 volume of a sphere is computed using the formula volume = 4/3 * pi * r**3.
 """
+
+def area():
+    r = float(input("What is the radius? "))
+    area = (math.pi) * (r**2)
+    volume = (4/3) * (math.pi) * (r**3)
+    print(area)
+    print(volume)
+
+#area()
 
 """
 Exercise 17:  Heat Capacity
@@ -36,6 +45,20 @@ and kilowatt hours to complete the last part of this exercise.
 (25 lines)
 """
 
+def heat():
+    m = float(input("What is the mass of the water? "))
+    deltaT = float(input("what is the temperature change? "))
+    c = 4.186
+    q = (m)*(c)*(deltaT) 
+    print(q)
+    kwh = (q)/ 3.6e6
+    cost = (0.089) * (kwh)
+    print(cost)
+    
+#heat()
+   
+
+
 """
 Exercise 18:  Volume of a Cylinder
 The volume of a cylinder can be computed by multiplying the area of its 
@@ -44,6 +67,21 @@ cylinder, along with its height, from the user and computes its volume.
 Display the result rounded to one decimal place.
 (15 lines)
 """
+
+def volume():
+    r = float(input("What is the radius? "))
+    area = (math.pi) * (r**2)
+    
+    height = float(input("What is the height? "))
+    vol = area * (height)
+    rounded = round(vol,1)
+    print(rounded)
+    
+    
+#volume()
+
+
+
 
 """
 Exercise 19:  Free Fall
@@ -55,6 +93,15 @@ use the formula vf = (vi**2 + 2ad)**(1/2) to compute the final speed vf,
 when the initial speed, vi, acceleration, a, and distance, d, are known.
 (16 lines)
 """
+
+def freeFall():
+    d = float(input("What is the height in meters?"))
+    vi = 0
+    a = 9.81
+    vf = (vi**2 + 2*a*d)**(1/2)
+    print (vf)
+
+#freeFall()
 
 
 """
@@ -80,6 +127,20 @@ by 5/9 and then add 273.15 to it.
 
 (19 lines)
 """
+def gasLaw():
+    
+    
+    R = 8.314
+    V = 12
+    P = 20,000,000
+    T = 20
+    
+    n = (P*V) / (R*T)
+    
+    print (n)
+
+
+#gasLaw()
 
 if __name__ == "__main__":
     print("Hi there!")
