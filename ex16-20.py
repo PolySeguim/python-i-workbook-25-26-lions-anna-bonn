@@ -94,6 +94,15 @@ when the initial speed, vi, acceleration, a, and distance, d, are known.
 (16 lines)
 """
 
+def freeFall():
+    d = float(input("What is the height in meters?"))
+    vi = 0
+    a = 9.81
+    vf = (vi**2 + 2*a*d)**(1/2)
+    print (vf)
+
+#freeFall()
+
 
 """
 Exercise 20: Ideal Gas Law
@@ -118,6 +127,20 @@ by 5/9 and then add 273.15 to it.
 
 (19 lines)
 """
+def gasLaw():
+    
+    
+    R = 8.314
+    V = 12
+    P = 20,000,000
+    T = 20
+    
+    n = (P*V) / (R*T)
+    
+    print (n)
+
+
+#gasLaw()
 
 if __name__ == "__main__":
     print("Hi there!")
